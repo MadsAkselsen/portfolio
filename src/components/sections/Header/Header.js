@@ -1,110 +1,51 @@
 import React from "react";
 import styled from "styled-components";
-import Particles from "react-particles-js";
+import ParticleField from "react-particles-webgl";
 import { Button } from "components/common/Button";
 
-const particlesOptions = {
+const config = {
+  showCube: false,
+  dimension: "3D",
+  velocity: 1.5,
+  boundaryType: "bounce",
+  antialias: false,
+  direction: {
+    xMin: -1,
+    xMax: 1,
+    yMin: -1,
+    yMax: 1,
+    zMin: -1,
+    zMax: 1,
+  },
+  lines: {
+    colorMode: "solid",
+    color: "#353346",
+    transparency: 0.9,
+    limitConnections: true,
+    maxConnections: 20,
+    minDistance: 300,
+    visible: true,
+  },
   particles: {
-    number: {
-      value: 60,
-      density: {
-        enable: true,
-        value_area: 800,
-      },
-    },
-    color: {
-      value: "#525765",
-    },
-    shape: {
-      type: "circle",
-      stroke: {
-        width: 0,
-        color: "#525765",
-      },
-    },
-    opacity: {
-      value: 1,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false,
-      },
-    },
-    size: {
-      value: 3,
-      random: false,
-      anim: {
-        enable: false,
-        speed: 40,
-        size_min: 0.1,
-        sync: false,
-      },
-    },
-    line_linked: {
-      enable: true,
-      distance: 250,
-      color: "#525765",
-      opacity: 0.4,
-      width: 1,
-    },
-    move: {
-      enable: true,
-      speed: 4,
-      direction: "none",
-      random: false,
-      straight: false,
-      out_mode: "out",
-      bounce: false,
-      attract: {
-        enable: false,
-        rotateX: 600,
-        rotateY: 1200,
-      },
-    },
+    colorMode: "solid",
+    color: "#353346",
+    transparency: 0.5,
+    shape: "circle",
+    boundingBox: "canvas",
+    count: 1000,
+    minSize: 10,
+    maxSize: 60,
+    visible: true,
   },
-  interactivity: {
-    detect_on: "canvas",
-    events: {
-      onhover: {
-        enable: false,
-        mode: "repulse",
-      },
-      onclick: {
-        enable: false,
-        mode: "push",
-      },
-      resize: true,
-    },
-    modes: {
-      grab: {
-        distance: 400,
-        line_linked: {
-          opacity: 1,
-        },
-      },
-      bubble: {
-        distance: 400,
-        size: 40,
-        duration: 1.038961038961039,
-        opacity: 0.43156843156843155,
-        speed: 3,
-      },
-
-      repulse: {
-        distance: 200,
-        duration: 0.4,
-      },
-      push: {
-        particles_nb: 4,
-      },
-      remove: {
-        particles_nb: 2,
-      },
-    },
+  cameraControls: {
+    enabled: false,
+    enableDamping: true,
+    dampingFactor: 0.2,
+    enableZoom: true,
+    autoRotate: true,
+    autoRotateSpeed: 0.3,
+    resetCameraFlag: false,
   },
-  retina_detect: true,
 };
 
 const ParticlesBackground = styled.div`
@@ -143,7 +84,7 @@ export default function Header() {
   return (
     <>
       <ParticlesBackground>
-        <Particles className="particles" params={particlesOptions} />
+        <ParticleField className="particles" config={config} />
       </ParticlesBackground>
       <HeaderStyled>
         <h1>

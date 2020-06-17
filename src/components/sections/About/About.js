@@ -2,6 +2,10 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "components/common/Button";
 
+const StyledButton = styled(Button)`
+  font-size: 1.3rem;
+`;
+
 const Container = styled.div`
   height: 100%;
   text-align: center;
@@ -62,7 +66,7 @@ export default function About() {
             voluptatum consequatur blanditiis inventore debitis fuga numquam
             voluptate architecto itaque molestiae.
           </p>
-          <Button>View Resume</Button>
+          <StyledButton>View Resume</StyledButton>
         </TextWrapper>
       </Wrapper>
     </Container>

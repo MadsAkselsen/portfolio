@@ -10,7 +10,7 @@ const Button = styled.button`
   width: auto;
   align-self: flex-start;
   padding: 6px 15px 6px 15px;
-  transition: top, left, right, bottom, 180ms ease-in-out;
+  transition: top, left, right, bottom, 100ms ease-in-out;
   z-index: 1;
 
   //animation
@@ -23,7 +23,7 @@ const Button = styled.button`
     right: 0;
     z-index: -1;
     background-color: #e31b6d;
-    transition: transform 70ms ease-in-out;
+    transition: transform 60ms ease-in-out;
     transform: scaleX(0);
     transform-origin: left;
   }
@@ -36,6 +36,7 @@ const Button = styled.button`
   :hover,
   :focus {
     color: white;
+    cursor: pointer;
   }
 `;
 
