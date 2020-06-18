@@ -3,6 +3,24 @@ import styled from "styled-components";
 import ParticleField from "react-particles-webgl";
 import { Button } from "components/common/Button";
 
+const particleAmount = () => {
+  if (window.matchMedia("(min-width: 2000px)").matches) {
+    return "1000";
+  } else if (window.matchMedia("(min-width: 1600px)").matches) {
+    return "600";
+  } else if (window.matchMedia("(min-width: 1300px)").matches) {
+    return "340";
+  } else if (window.matchMedia("(min-width: 1000px)").matches) {
+    return "230";
+  } else if (window.matchMedia("(min-width: 700px)").matches) {
+    return "150";
+  } else if (window.matchMedia("(min-width: 500px)").matches) {
+    return "150";
+  } else if (window.matchMedia("(min-width: 1px)").matches) {
+    return "100";
+  }
+};
+
 const config = {
   showCube: false,
   dimension: "3D",
@@ -32,7 +50,7 @@ const config = {
     transparency: 0.5,
     shape: "circle",
     boundingBox: "canvas",
-    count: 1000,
+    count: particleAmount(),
     minSize: 10,
     maxSize: 60,
     visible: true,
