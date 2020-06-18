@@ -64,14 +64,41 @@ const HeaderStyled = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-left: 15%;
+  align-items: center;
   font-family: Raleway;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.5vw;
-  line-height: 4vw;
+  font-size: 1.2rem;
+  line-height: 3rem;
+  text-align: center;
+  margin: 0 6rem 0 6rem 0;
+
   h1 {
     margin-bottom: 15px;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.4rem;
+    line-height: 4rem;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: start;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 1.6rem;
+    margin-left: 6rem;
+  }
+
+  @media (min-width: 1200px) {
+    font-size: 1.6rem;
+    margin-left: 15%;
+  }
+
+  @media (min-width: 1800px) {
+    font-size: 1.5vw;
+    line-height: 4vw;
+    margin-left: 15%;
   }
 
   .highlight {

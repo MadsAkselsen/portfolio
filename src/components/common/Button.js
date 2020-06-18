@@ -8,7 +8,7 @@ const Button = styled.button`
   font-size: 1.6rem;
   font-weight: bold;
   width: auto;
-  align-self: flex-start;
+
   padding: 6px 15px 6px 15px;
   transition: top, left, right, bottom, 100ms ease-in-out;
   z-index: 1;

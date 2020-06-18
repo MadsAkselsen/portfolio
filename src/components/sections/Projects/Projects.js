@@ -51,6 +51,12 @@ const ButtonsWrapper = styled.div`
     color: #e31b6d;
     font-weight: bold;
     margin-left: 20px;
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateX(4px);
+    }
   }
 `;
 
