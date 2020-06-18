@@ -4,7 +4,7 @@ import { Button } from "components/common/Button";
 import Tilt from "react-tilt";
 
 const StyledButton = styled(Button)`
-  font-size: 1.3rem;
+  font-size: 1.1rem;
 `;
 
 const Wrapper = styled.div`
@@ -29,12 +29,12 @@ const ProjectDescription = styled.div`
   margin-right: 30px;
 
   h3 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     text-align: left;
     margin: 0;
   }
   p {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: normal;
     width: 20vw;
     text-align: left;
@@ -46,7 +46,7 @@ const ButtonsWrapper = styled.div`
   justify-content: flex-start;
 
   .sourceCode {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     align-self: center;
     color: #e31b6d;
     font-weight: bold;
