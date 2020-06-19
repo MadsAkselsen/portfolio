@@ -75,11 +75,11 @@ export default function Projects() {
             voluptate ex architecto itaque molestiae.
           </p>
           <ButtonsWrapper>
-            <a href="#">
+            <a href="https://www.google.com/">
               <StyledButton>See Live</StyledButton>
             </a>
 
-            <a href="#" className="sourceCode">
+            <a href="https://www.google.com/" className="sourceCode">
               Source Code
             </a>
           </ButtonsWrapper>
@@ -111,11 +111,11 @@ export default function Projects() {
             voluptate ex architecto itaque molestiae.
           </p>
           <ButtonsWrapper>
-            <a>
+            <a href="https://www.google.com/">
               <StyledButton>See Live</StyledButton>
             </a>
 
-            <a href="#" className="sourceCode">
+            <a href="https://www.google.com/" className="sourceCode">
               Source Code
             </a>
           </ButtonsWrapper>
@@ -147,11 +147,11 @@ export default function Projects() {
             voluptate ex architecto itaque molestiae.
           </p>
           <ButtonsWrapper>
-            <a>
+            <a href="https://www.google.com/">
               <StyledButton>See Live</StyledButton>
             </a>
 
-            <a href="#" className="sourceCode">
+            <a href="https://www.google.com/" className="sourceCode">
               Source Code
             </a>
           </ButtonsWrapper>
@@ -183,11 +183,11 @@ export default function Projects() {
             voluptate ex architecto itaque molestiae.
           </p>
           <ButtonsWrapper>
-            <a>
+            <a href="https://www.google.com/">
               <StyledButton>See Live</StyledButton>
             </a>
 
-            <a href="#" className="sourceCode">
+            <a href="https://www.google.com/" className="sourceCode">
               Source Code
             </a>
           </ButtonsWrapper>
