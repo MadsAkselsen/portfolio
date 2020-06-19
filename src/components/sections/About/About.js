@@ -55,7 +55,7 @@ const ImageWrapper = styled.div`
   }
 
   @media (min-width: 1600px) {
-    width: 350px;
+    width: 300px;
   }
 `;
 
@@ -93,17 +93,15 @@ export default function About() {
         </ImageWrapper>
         <TextWrapper>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
-            neque, ipsa animi maiores repellendu distinctioaperiam earum dolor
-            voluptatum consequatur blanditiis inventore debitis fuga numquam
-            voluptate architecto itaque molestiae.
+            I am a Web Developer with enthusiasm and focus on Frontend
+            Development and Scripting.
           </p>
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
-            neque, ipsa animi maiores repellendu distinctioaperiam earum dolor
-            voluptatum consequatur blanditiis inventore debitis fuga numquam
-            voluptate architecto itaque molestiae.
+            I am passionate about building scalable software, creating effective
+            solutions, and learning every day to grow professionally in the IT
+            field.
           </p>
+          <p>Feel free to contact me via email at any time</p>
           <StyledButton>View Resume</StyledButton>
         </TextWrapper>
       </Wrapper>
