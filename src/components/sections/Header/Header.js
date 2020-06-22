@@ -86,13 +86,21 @@ const HeaderStyled = styled.div`
   font-family: Raleway;
   font-style: normal;
   font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 3rem;
+  font-size: 1rem;
+  line-height: 2.5rem;
   text-align: center;
   margin: 0 6rem 0 6rem 0;
 
   h1 {
-    margin-bottom: 15px;
+    margin: 0 30px 15px 30px;
+
+    @media (min-width: 643px) {
+      margin: 0 0 15px 0;
+    }
+  }
+
+  @media (min-width: 530px) {
+    font-size: 1.3rem;
   }
 
   @media (min-width: 1000px) {
