@@ -26,6 +26,7 @@ const ProjectWrapper = styled.div`
   flex-direction: column;
   align-items: center;
   margin-bottom: 160px;
+  font-size: 1.5rem;
 
   @media (min-width: 990px) {
     flex-direction: row;

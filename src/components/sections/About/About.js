@@ -13,17 +13,16 @@ const Container = styled.div`
     #8f94a0;
   background-color: #252934;
   clip-path: none;
-  padding: 3rem 3rem 7rem 3rem;
+  padding: 2rem 3rem 5rem 3rem;
   color: white;
-  font-size: 2rem;
-  h2 {
-    margin-bottom: 60px;
-  }
+  font-size: 1.5rem;
 
-  @media (min-width: 767px) {
+  @media (min-width: 1000px) {
     h2 {
-      margin-bottom: 100px;
+      margin-bottom: 70px;
     }
+    font-size: 2rem;
+    padding: 2rem 3rem 5rem 3rem;
   }
 
   @media (min-width: 1600px) {

@@ -6,11 +6,16 @@ const Wrapper = styled.div`
   height: 100%;
   background-color: #252934;
   padding: 0 3rem 0 3rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: white;
   text-align: center;
+  padding-top: 20px;
   h2 {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
+  }
+
+  @media (min-width: 1000px) {
+    font-size: 2rem;
   }
 `;
 

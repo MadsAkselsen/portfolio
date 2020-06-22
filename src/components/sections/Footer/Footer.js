@@ -7,7 +7,7 @@ const SectionWrapper = styled.div`
   height: 100%;
   background-color: #252934;
   padding-bottom: 15px;
-  padding-top: 2%;
+  padding-top: 30px+;
   font-size: 0.8rem;
   color: #8f94a0;
   text-align: center;

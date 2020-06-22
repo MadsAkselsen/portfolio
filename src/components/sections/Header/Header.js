@@ -15,9 +15,9 @@ const particleAmount = () => {
   } else if (window.matchMedia("(min-width: 700px)").matches) {
     return "150";
   } else if (window.matchMedia("(min-width: 500px)").matches) {
-    return "150";
-  } else if (window.matchMedia("(min-width: 1px)").matches) {
     return "100";
+  } else if (window.matchMedia("(min-width: 1px)").matches) {
+    return "85";
   }
 };
 
