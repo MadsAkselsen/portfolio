@@ -56,7 +56,6 @@ const ProjectDescription = styled.div`
   p {
     font-size: 1.1rem;
     font-weight: normal;
-
     text-align: left;
   }
 `;
