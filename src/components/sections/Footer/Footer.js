@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import SocialFollow from "../../common/SocialFollow";
 
+import { Link } from "react-scroll";
+
 const SectionWrapper = styled.div`
   height: 100%;
   background-color: #252934;
@@ -31,6 +33,7 @@ const StyledChevron = styled.div`
 
     :hover {
       transform: translateY(-2px);
+      cursor: pointer;
     }
   }
 `;
@@ -45,9 +48,20 @@ export default function Footer() {
   return (
     <SectionWrapper>
       <StyledChevron>
-        <a href="https://www.instagram.com/madsakselsen/">
+        <Link
+          activeClass="active"
+          to="header"
+          spy={true}
+          smooth={true}
+          hashSpy={true}
+          offset={0}
+          duration={1000}
+          delay={0}
+          isDynamic={true}
+          ignoreCancelEvents={false}
+        >
           <FontAwesomeIcon icon={faChevronUp} size="2x" />
-        </a>
+        </Link>
       </StyledChevron>
       <IconWrapper>
         <SocialFollow />

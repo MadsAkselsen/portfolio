@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Fade from "react-reveal/Fade";
 
 const Container = styled.div`
   text-align: center;
@@ -51,16 +52,20 @@ const ContactInfoWrapper = styled.div`
 export default function About() {
   return (
     <Container>
-      <h2>CONTACT</h2>
-      <Wrapper>
-        <TextWrapper>
-          <p>Would you like to work with me? Awesome!</p>
-          <ContactInfoWrapper>
-            <p>Email: akselsenmads@gmail.com</p>
-            <p>Linkedin: @MadsAkselsen</p>
-          </ContactInfoWrapper>
-        </TextWrapper>
-      </Wrapper>
+      <Fade bottom duration={1000} delay={300} distance="0px">
+        <h2>CONTACT</h2>
+      </Fade>
+      <Fade bottom duration={1000} delay={800} distance="30px">
+        <Wrapper>
+          <TextWrapper>
+            <p>Would you like to work with me? Awesome!</p>
+            <ContactInfoWrapper>
+              <p>Email: akselsenmads@gmail.com</p>
+              <p>Linkedin: @MadsAkselsen</p>
+            </ContactInfoWrapper>
+          </TextWrapper>
+        </Wrapper>
+      </Fade>
     </Container>
   );
 }

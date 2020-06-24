@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Button } from "components/common/Button";
 import Tilt from "react-tilt";
+import Fade from "react-reveal/Fade";
 
 const StyledButton = styled(Button)`
   font-size: 1.1rem;
@@ -80,26 +81,55 @@ const ButtonsWrapper = styled.div`
 `;
 
 export default function Project({ title, image, children }) {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true);
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+      setIsDesktop(false);
+    }
+  }, []);
   return (
     <ProjectWrapper>
-      <ProjectDescription>
-        <h3>{title}</h3>
-        <p>{children}</p>
-        <ButtonsWrapper>
-          <a href="https://www.google.com/">
-            <StyledButton>See Live</StyledButton>
-          </a>
+      <Fade
+        left={isDesktop}
+        bottom={isMobile}
+        duration={1000}
+        delay={500}
+        distance="30px"
+      >
+        <ProjectDescription>
+          <h3>{title}</h3>
 
-          <a href="https://www.google.com/" className="sourceCode">
-            Source Code
-          </a>
-        </ButtonsWrapper>
-      </ProjectDescription>
-      <StyledTilt className="Tilt" options={{ max: 15, scale: 1 }}>
-        <div className="Tilt-inner">
-          <img src={image} alt="Project" width="100%"></img>
-        </div>
-      </StyledTilt>
+          <p>{children}</p>
+          <ButtonsWrapper>
+            <a href="https://www.google.com/">
+              <StyledButton>See Live</StyledButton>
+            </a>
+
+            <a href="https://www.google.com/" className="sourceCode">
+              Source Code
+            </a>
+          </ButtonsWrapper>
+        </ProjectDescription>
+      </Fade>
+      <Fade
+        right={isDesktop}
+        bottom={isMobile}
+        duration={1000}
+        delay={1000}
+        distance="30px"
+      >
+        <StyledTilt className="Tilt" options={{ max: 15, scale: 1 }}>
+          <div className="Tilt-inner">
+            <img src={image} alt="Project" width="100%"></img>
+          </div>
+        </StyledTilt>
+      </Fade>
     </ProjectWrapper>
   );
 }

@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { Button } from "components/common/Button";
+import Fade from "react-reveal/Fade";
 
 const StyledButton = styled(Button)`
   font-size: 1.1rem;
@@ -79,29 +80,54 @@ const TextWrapper = styled.div`
 `;
 
 export default function About() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true);
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+      setIsDesktop(false);
+    }
+  }, []);
   return (
-    <Container>
-      <h2>ABOUT ME</h2>
+    <Container id="about">
+      <Fade bottom duration={1000} delay={300} distance="0px">
+        <h2>ABOUT ME</h2>
+      </Fade>
       <Wrapper>
-        <ImageWrapper>
-          <img
-            src={require("../../../../src/images/MadsAkselsen.jpg")}
-            alt="Mads Akselsen"
-            width="100%"
-          ></img>
-        </ImageWrapper>
+        <Fade bottom duration={1000} delay={600} distance="30px">
+          <ImageWrapper>
+            <img
+              src={require("../../../../src/images/MadsAkselsen.jpg")}
+              alt="Mads Akselsen"
+              width="100%"
+            ></img>
+          </ImageWrapper>
+        </Fade>
+
         <TextWrapper>
-          <p>
-            I am a Web Developer with enthusiasm and focus on Frontend
-            Development and Scripting.
-          </p>
-          <p>
-            I am passionate about building scalable software, creating effective
-            solutions, and learning every day to grow professionally in the IT
-            field.
-          </p>
-          <p>Feel free to contact me via email at any time</p>
-          <StyledButton>View Resume</StyledButton>
+          <Fade
+            left={isDesktop}
+            bottom={isMobile}
+            duration={1000}
+            delay={1000}
+            distance="30px"
+          >
+            <p>
+              I am a Web Developer with enthusiasm and focus on Frontend
+              Development and Scripting.
+            </p>
+            <p>
+              I am passionate about building scalable software, creating
+              effective solutions, and learning every day to grow professionally
+              in the IT field.
+            </p>
+            <p>Feel free to contact me via email at any time</p>
+            <StyledButton>View Resume</StyledButton>
+          </Fade>
         </TextWrapper>
       </Wrapper>
     </Container>

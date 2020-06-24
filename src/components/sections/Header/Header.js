@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import ParticleField from "react-particles-webgl";
 import { Button } from "components/common/Button";
+import { Link } from "react-scroll";
+import Fade from "react-reveal/Fade";
 
 const particleAmount = () => {
   if (window.matchMedia("(min-width: 2000px)").matches) {
@@ -89,7 +91,7 @@ const HeaderStyled = styled.div`
   font-size: 1rem;
   line-height: 2.5rem;
   text-align: center;
-  margin: 0 6rem 0 6rem 0;
+  margin: 0 2rem 0 2rem;
 
   h1 {
     margin: 0 30px 15px 30px;
@@ -101,6 +103,7 @@ const HeaderStyled = styled.div`
 
   @media (min-width: 530px) {
     font-size: 1.3rem;
+    line-height: 3rem;
   }
 
   @media (min-width: 1000px) {
@@ -134,17 +137,58 @@ const HeaderStyled = styled.div`
 `;
 
 export default function Header() {
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth > 769) {
+      setIsDesktop(true);
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+      setIsDesktop(false);
+    }
+  }, []);
   return (
     <>
       <ParticlesBackground>
         <ParticleField className="particles" config={config} />
       </ParticlesBackground>
-      <HeaderStyled>
-        <h1>
-          Hi, I'm <span className="highlight">Mads Akselsen</span>. <br />
-          I'm a Frontend Web Developer.
-        </h1>
-        <Button>Know more</Button>
+      <HeaderStyled id="header">
+        <Fade
+          left={isDesktop}
+          bottom={isMobile}
+          duration={1000}
+          delay={500}
+          distance="30px"
+        >
+          <h1>
+            Hi, I'm <span className="highlight">Mads Akselsen</span>. <br />
+            I'm a Frontend Web Developer.
+          </h1>
+        </Fade>
+        <Fade
+          left={isDesktop}
+          bottom={isMobile}
+          duration={1000}
+          delay={1000}
+          distance="30px"
+        >
+          <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            hashSpy={true}
+            offset={0}
+            duration={1000}
+            delay={0}
+            isDynamic={true}
+            ignoreCancelEvents={false}
+          >
+            <Button>Know more</Button>
+          </Link>
+        </Fade>
       </HeaderStyled>
     </>
   );
