@@ -12,12 +12,16 @@ const StyledTilt = styled(Tilt)`
   width: 100%;
 
   @media (min-width: 990px) {
-    height: 342px;
+    img {
+      height: 342px;
+    }
     width: 610px;
   }
 
   @media (min-width: 1200px) {
-    height: 368px;
+    img {
+      height: 368px;
+    }
     width: 656px;
   }
 `;
@@ -25,23 +29,24 @@ const StyledTilt = styled(Tilt)`
 const ProjectWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-bottom: 160px;
+
+  margin-bottom: 100px;
   font-size: 1.5rem;
 
   @media (min-width: 990px) {
     flex-direction: row;
     justify-content: center;
-    margin-bottom: 160px;
+    margin-bottom: 100px;
   }
 `;
 
 const ProjectDescription = styled.div`
+  align-self: flex-start;
   width: 100%;
   margin-bottom: 40px;
 
   @media (min-width: 990px) {
-    margin-right: 70px;
+    margin-right: 50px;
     width: 280px;
   }
 
@@ -80,7 +85,13 @@ const ButtonsWrapper = styled.div`
   }
 `;
 
-export default function Project({ title, image, children }) {
+export default function Project({
+  title,
+  image,
+  children,
+  sourceLink,
+  liveLink,
+}) {
   const [isDesktop, setIsDesktop] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
 
@@ -107,11 +118,11 @@ export default function Project({ title, image, children }) {
 
           <p>{children}</p>
           <ButtonsWrapper>
-            <a href="https://www.google.com/">
+            <a href={liveLink}>
               <StyledButton>See Live</StyledButton>
             </a>
 
-            <a href="https://www.google.com/" className="sourceCode">
+            <a href={sourceLink} className="sourceCode">
               Source Code
             </a>
           </ButtonsWrapper>

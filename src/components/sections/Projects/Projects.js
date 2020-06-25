@@ -27,31 +27,30 @@ export default function Projects() {
         <h2>PROJECTS</h2>
       </Fade>
       <Project
-        title={"Project Title"}
-        image={require("../../../images/projectImage.jpg")}
+        title={"My portfolio"}
+        image={require("../../../images/projectImages/portfolioProject.jpg")}
+        sourceLink="https://github.com/MadsAkselsen/portfolio"
+        liveLink="https://vigorous-ardinghelli-913472.netlify.app/"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
-        neque, ipsa animi maiores repellendus distinctio aperiam earum dolor
-        voluptatum consequatur blanditiis inventore debitis fuga numquam
-        voluptate ex architecto itaque molestiae.
+        Made this portfolio in React with Styled Components
       </Project>
       <Project
-        title={"Project Title"}
-        image={require("../../../images/projectImage.jpg")}
+        title={"CRUD Todo list"}
+        image={require("../../../images/projectImages/todoProject.jpg")}
+        sourceLink="https://github.com/MadsAkselsen/todo-frontend"
+        liveLink="https://brave-borg-e2eca8.netlify.app/"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
-        neque, ipsa animi maiores repellendus distinctio aperiam earum dolor
-        voluptatum consequatur blanditiis inventore debitis fuga numquam
-        voluptate ex architecto itaque molestiae.
+        A todo list made with Restful API, and having all CRUD features. Made in
+        React.
       </Project>
       <Project
-        title={"Project Title"}
-        image={require("../../../images/projectImage.jpg")}
+        title={"RobotFriends"}
+        image={require("../../../images/projectImages/robotfriendsProject.jpg")}
+        sourceLink="https://github.com/MadsAkselsen/robotfriends"
+        liveLink="https://madsakselsen.github.io/robotfriends/"
       >
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi
-        neque, ipsa animi maiores repellendus distinctio aperiam earum dolor
-        voluptatum consequatur blanditiis inventore debitis fuga numquam
-        voluptate ex architecto itaque molestiae.
+        An app made in react with a public API. The user can search for robots
+        by typing names.
       </Project>
     </Wrapper>
   );
